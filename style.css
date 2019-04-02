@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic");
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700&subset=cyrillic');
+
+@font-face {
+  font-family: "alegreya";
+  src: url("./fonts/alegreyasanssc-black-webfont.woff2") format("woff2"),
+    url("./fonts/alegreyasanssc-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'PTRoubleSans';
+  src: url('./fonts/PTRoubleSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 2px 10px;
+  background: #1b1b1b;
+  color: #ffc92f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font: 16px / 1.42 "Roboto", Arial, sans-serif;
+  color: #212121;
+  background: #fcf5e6;
+}
+
+.rub {
+  font-family: 'PTRoubleSans';
+}
+
+.rub:before {
+  content: "9";
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 100vh;
+  background: url("./img/bg/hero.jpg") center center no-repeat / cover;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 5%;
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+
+.mail__content {
+  padding: 10px;
+  background: #212121;
+  color: #ffbc2f;
+}
+
+.fade-slider__item {
+  background: url('./img/content/hero/slider_pic_1.png') center center no-repeat /contain;
+  height: 490px;
+  width: 860px;
+  position: relative;
+}
+
+.fade-slider__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+.fade-slider__word {
+  font-family: "alegreya", Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2px 18px;
+  margin-top: -2px;
+}
+
+.fade-slider__word:nth-child(2n) {
+  margin-left: 10px;
+}
+
+.fade-slider__word--yellow {
+  color: #ffbc2f;
+}
+
+.products__filter {
+  display: flex;
+  justify-content: center;
+}
+
+.products__filter-link {
+  font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: #1b1b1b;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+.products__filter-link:hover {
+  color: #d82727;
+}
+
+.products__filter-item--active .products__filter-link {
+  background: #1b1b1b;
+  color: #ffc92f;
+}
+
+.products__filter-item {
+  margin-right: 35px;
+}
+
+.products__filter-item:last-child {
+  margin-right: 0;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -25px;
+}
+
+.products__item {
+  width: 240px;
+  margin-left: 25px;
+  height: 290px;
+  background: #ffc92f;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.products__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.products__link:hover .products__desc {
+  transform: translate(0);
+}
+
+.products__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.products__img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.products__item--size-double {
+  width: 505px;
+  height: 410px;
+}
+
+.products__item--color-black {
+  background: #232323;
+}
+
+.products__item--color-black .products__price {
+  color: #212121;
+  border-bottom-color: #ffc92f;
+}
+
+.products__desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 30px;
+  background: rgba(35, 35, 35, .8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: translateY(110%);
+  transition: transform .3s;
+}
+
+.products__desc-text {
+  margin-bottom: 10px;
+}
+
+.products__price {
+  border-bottom: 34px solid #232323;
+  border-left: 5px solid transparent;
+  border-right: 2px solid transparent;
+  width: 94px;
+  transform: rotate(179deg);
+  top: 10px;
+  left: -6px;
+  position: absolute;
+  font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.products__price-amount {
+  transform: rotate(-179deg);
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+
+.products__price-amount .rub {
+  font-size: 13px;
+}
+
+.collections__list {
+  display: flex;
+  margin-left: -20px;
+  justify-content: center;
+}
+
+.collections {
+  margin-bottom: 80px;
+}
+
+.collections__item {
+  width: 425px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  background: url('./img/bg/pattern.png') center center / 100%;
+  margin-left: 20px;
+}
+
+.collections__link {
+  display: block;
+  padding: 50px 13% 50px 46%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 10px;
+}
+
+.collections__title {
+  font-size: 44px;
+  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.collections__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  left: -20px;
+  background: center center no-repeat/contain;
+
+}
+
+.collections__item--kids:before {
+  background-image: url('./img/collections/collection_kids.png');
+}
+
+.collections__item--guys:before {
+  background-image: url('./img/collections/collection_man.png');
+}
+.collections__item--girls:before {
+  background-image: url('./img/collections/collection_woman.png');
+}
+
+.footer-menu {
+  margin-bottom: 50px;
+}
+
+.footer-menu__sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu__col {
+  margin-right: 20px;
+}
+.footer-menu__col:last-child {
+  margin-right: 0px;
+}
+
+.footer-menu__title {
+  font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b1b1b;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.footer-menu__item {
+  margin-bottom: 10px;
+}
+
+.footer-menu__link {
+  color: #737373;
+  font-size: 12px;
+  text-decoration: none;
+}
+.footer-menu__link:hover {
+  color: #d82727;
+}
+
+.adds {
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.adds__col {
+  margin-right: 20px;
+  flex: 1;
+  display: flex;
+}
+
+.adds__col:last-child {
+  margin-right: 0;
+}
+
+.adds__best {
+  text-align: center;
+  color: #fff;
+  background: #232323;
+  font-size: 37px;
+  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 30px 10%;
+  width: 100%;
+}
+
+.adds__col-socials {
+  width: 100%;
+  height: 100%;
+  background: url('./img/bg/pattern.png') center center / 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials__item {
+  margin-right: 30px;
+}
+
+.socials__item:last-child {
+  margin-right: 0px;
+}
+
+
+.socials__link {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.socials__link:hover {
+  fill: #d82727;
+}
+
+.socials__icon {
+  width: 100%;
+  height: 100%;
+}
