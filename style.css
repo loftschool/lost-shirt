@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700&subset=cyrillic');
 
 @font-face {
@@ -24,6 +25,15 @@
   padding: 2px 10px;
   background: #1b1b1b;
   color: #ffc92f;
+  display: inline-block;
+}
+
+.btn--red {
+  text-decoration: none;
+  font-size: 22px;
+  background: #d82727;
+  color: #fff;
+  padding: 6px 60px;
 }
 
 * {
@@ -83,76 +93,101 @@ body {
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 5%;
+  margin: 0 auto;
+  width: 1140px;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  align-items: center;
 }
 
 .logo {
   display: block;
+  width: 120px;
+}
+
+.logo__image {
+  max-width: 100%;
+}
+
+.header__logo {
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .mail {
-  position: absolute;
-  top: 0;
-  right: 0;
   text-decoration: none;
   text-align: center;
   color: inherit;
+  font-size: 12px;
+}
+
+.header__mail {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mail__title {
+  margin-bottom: 3px;
 }
 
 .mail__content {
-  padding: 10px;
+  padding: 5px 10px;
   background: #212121;
   color: #ffbc2f;
 }
 
 .fade-slider__item {
   background: url('./img/content/hero/slider_pic_1.png') center center no-repeat /contain;
-  height: 490px;
-  width: 860px;
+  height: 584px;
+  width: 889px;
   position: relative;
 }
 
 .fade-slider__text {
+  position: absolute;
+  top: 158px;
+  left: 8px;
+}
+
+.lined-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
-  top: 150px;
-  left: 0;
+  font-size: 47px;
 }
 
-.fade-slider__word {
+.lined-text__word {
   font-family: "alegreya", Arial, Helvetica, sans-serif;
   background: #000;
   color: #fff;
   text-transform: uppercase;
-  padding: 2px 18px;
-  margin-top: -2px;
+  padding: 0px 17px 8px;
+  margin-top: -5px;
+  line-height: 1;
 }
 
-.fade-slider__word:nth-child(2n) {
-  margin-left: 10px;
+.lined-text__word:nth-child(2n) {
+  margin-left: 6px;
 }
 
-.fade-slider__word--yellow {
+.lined-text__word--yellow {
   color: #ffbc2f;
 }
 
-.products__filter {
+.products-filter {
   display: flex;
   justify-content: center;
+  margin-bottom: 78px;
 }
 
-.products__filter-link {
+.products-filter__link {
   font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
   text-transform: uppercase;
-  padding: 6px 10px;
+  padding: 2px 21px;
   text-decoration: none;
   color: #1b1b1b;
   font-size: 18px;
@@ -161,20 +196,20 @@ body {
 }
 
 
-.products__filter-link:hover {
+.products-filter__link:hover {
   color: #d82727;
 }
 
-.products__filter-item--active .products__filter-link {
+.products-filter__item--active .products-filter__link {
   background: #1b1b1b;
   color: #ffc92f;
 }
 
-.products__filter-item {
-  margin-right: 35px;
+.products-filter__item {
+  margin-right: 25px;
 }
 
-.products__filter-item:last-child {
+.products-filter__item:last-child {
   margin-right: 0;
 }
 
@@ -266,20 +301,21 @@ body {
   border-right: 2px solid transparent;
   width: 94px;
   transform: rotate(179deg);
-  top: 10px;
+  top: 13px;
   left: -6px;
   position: absolute;
   font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
   color: #fff;
   font-weight: bold;
   font-size: 22px;
+
 }
 
 .products__price-amount {
   transform: rotate(-179deg);
   position: absolute;
   top: 2px;
-  right: 10px;
+  right: 19px;
 }
 
 .products__price-amount .rub {
@@ -293,11 +329,16 @@ body {
 }
 
 .collections {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
+}
+
+.collections__desc {
+  margin-bottom: 16px;
 }
 
 .collections__item {
   width: 425px;
+  height: 304px;
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
@@ -311,6 +352,9 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .collections__title {
@@ -319,33 +363,46 @@ body {
   font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
   line-height: 1;
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .collections__item:before {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  height: 100%;
-  width: 300px;
-  left: -20px;
+  top: -49px;
+  height: 176%;
+  width: 325px;
+  left: -78px;
   background: center center no-repeat/contain;
 
 }
 
 .collections__item--kids:before {
   background-image: url('./img/collections/collection_kids.png');
+  top: -32px;
+  height: 174%;
+  width: 302px;
+  left: -106px;
 }
 
 .collections__item--guys:before {
   background-image: url('./img/collections/collection_man.png');
 }
+
 .collections__item--girls:before {
   background-image: url('./img/collections/collection_woman.png');
+  top: -96px;
+  width: 325px;
+  left: -88px;
+}
+
+.footer__container {
+  padding: 0 5%;
 }
 
 .footer-menu {
-  margin-bottom: 50px;
+  margin-bottom: 78px;
 }
 
 .footer-menu__sections {
@@ -356,6 +413,7 @@ body {
 .footer-menu__col {
   margin-right: 20px;
 }
+
 .footer-menu__col:last-child {
   margin-right: 0px;
 }
@@ -366,11 +424,11 @@ body {
   font-weight: bold;
   color: #1b1b1b;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 .footer-menu__item {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .footer-menu__link {
@@ -378,6 +436,7 @@ body {
   font-size: 12px;
   text-decoration: none;
 }
+
 .footer-menu__link:hover {
   color: #d82727;
 }
@@ -405,7 +464,7 @@ body {
   font-weight: bold;
   font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
   text-transform: uppercase;
-  padding: 30px 10%;
+  padding: 23px 10%;
   width: 100%;
 }
 
@@ -423,7 +482,7 @@ body {
 }
 
 .socials__item {
-  margin-right: 30px;
+  margin-right: 34px;
 }
 
 .socials__item:last-child {
@@ -444,4 +503,262 @@ body {
 .socials__icon {
   width: 100%;
   height: 100%;
+}
+
+.inner-header {
+  background: url('./img/bg/hero.jpg') center center no-repeat / cover;
+  margin-bottom: 50px;
+}
+
+.lined-text--small {
+  font-size: 20px;
+}
+
+.lined-text--small .lined-text__word {
+
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.lined-text--small .lined-text__word:nth-child(2n) {
+  margin-left: 3px;
+}
+
+.inner-header__container {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 136px;
+}
+
+.inner-header__title {
+  background: url('./img/decor/header-guys.png') center bottom 77% no-repeat /92%;
+  width: 342px;
+  align-self: stretch;
+  position: relative;
+}
+
+.inner-header__title-text {
+  position: absolute;
+  top: 13px;
+  left: -49px;
+}
+
+.page-content__container {
+  width: 886px;
+}
+
+.product-showroom {
+  border: 10px solid #ffc92f;
+  display: flex;
+  margin-bottom: 73px;
+}
+
+.product-showroom__pic {
+  background: #ffc92f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.product-showroom__pic-image {
+  max-width: 80%;
+  display: block;
+}
+
+.product-showroom__info-row {
+  padding: 20px;
+  border-bottom: 1px solid #e0d9c9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 22px;
+}
+
+.product-showroom__info-row:last-child {
+  border-bottom: none;
+}
+
+.product-showroom__info {
+  width: 50%;
+}
+
+.product-showroom__type {
+  font-size: 13px;
+  color: #ffc92f;
+  margin-bottom: 3px;
+}
+
+.product-showroom__title {
+  font-size: 38px;
+  color: #1b1b1b;
+  margin-bottom: 2px;
+  font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.product-showroom__price {
+  font-family: 'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+  padding: 4px 12px;
+  line-height: 1;
+  background: #ffc92f;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.product-showroom__price .rub {
+  font-size: 21px;
+}
+
+.product-showroom__data-row {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+
+.product-showroom__selector {
+  margin-bottom: 20px;
+}
+
+.product-sizes {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.product__selector {
+  margin-bottom: 24px;
+}
+
+.product-sizes__item {
+  margin-right: 5px;
+  position: relative;
+}
+
+
+.product-sizes__item--disabled .product-sizes__display {
+  color: #cac3b3;
+}
+
+.product-sizes__switcher {
+  display: block;
+  cursor: pointer;
+}
+
+.product-sizes__switcher-control {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.product-sizes__switcher-control:checked + .product-sizes__display {
+  border: solid 2px #ffc92f;
+  background: #ffc92f;
+}
+
+.product-sizes__display {
+  border: solid 2px #e0d9c8;
+  width: 41px;
+  height: 41px;
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  color: #212121;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.product-sizes__item:not(.product-sizes__item--disabled) .product-sizes__display:hover {
+  border-color: #ffc92f;
+}
+
+.products {
+  margin-bottom: 93px;
+}
+
+.product-colors {
+  display: flex;
+}
+
+.product-colors__block {
+  cursor: pointer;
+}
+
+.product-colors__item {
+  margin-right: 13px;
+  position: relative;
+}
+
+.product-colors__radio:checked + .product-colors__display {
+  border-color: #ffc92f;
+}
+
+.product-colors__display {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.product-colors__display-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.product-colors__radio {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.product-tabs__content {
+  border: 10px solid #ffc92f;
+}
+
+.product-desc {
+  display: flex;
+  color: #1b1b1b;
+}
+
+.product-tabs {
+  margin-bottom: 65px;
+}
+
+.product-tabs__view {
+  width: 32%;
+  padding: 27px;
+  border-right: 1px solid #e0d9c8;
+}
+
+.product-tabs__content-item {
+  display: flex;
+}
+
+.product-desc__icon {
+  width: 20px;
+  height: 18px;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+.product-desc__text {
+  font-size: 10px;
+}
+
+.product-tabs__text {
+  flex: 1;
+  padding: 24px 32px;
+  font-size: 10px;
+}
+
+
+.product-desc__care-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
