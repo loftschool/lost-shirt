@@ -37,11 +37,23 @@
             </li>
           </ul>
         </div>
-        <!--
         <aside class="sidebar">
-          <a href="#" class="logo">
-            <img src="./img/logo.png" class="logo__image" alt="" />
+          <a href="#" class="sidebar__bars">
+            <svg class="sidebar__bars--icon">
+              <use xlink:href="./img/icons-sprite.svg#bars"></use>
+            </svg>
           </a>
+          <div class="sidebar__header">
+            <a href="#" class="logo">
+              <img src="./img/logo.png" class="logo__image" alt="" />
+            </a>
+            <a href="#" class="sidebar__close">
+              <svg class="sidebar__close-icon">
+                <use xlink:href="./img/icons-sprite.svg#cross"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="menu sidebar__menu">
             <ul class="menu__list">
               <li class="menu__item">
                 <a href="#" class="menu__link">Детская коллекция</a>
@@ -53,10 +65,9 @@
                 <a href="#" class="menu__link">Женская коллекция</a>
               </li>
             </ul>
-          <nav class="menu">
           </nav>
         </aside>
-      --></section>
+      </section>
       <section class="products">
         <div class="container">
           <ul class="products-filter">
