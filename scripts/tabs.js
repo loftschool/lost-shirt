@@ -1,6 +1,19 @@
 //tabs
 (function() {
   const controllsContainer = document.querySelector(".products-filter");
+  const tabList = document.querySelector(".product-tabs__content");
+
+  const { controlls, tabs } = {
+    controlls: {
+      activeClass: "products-filter__item--active",
+      items: controllsContainer.children
+    },
+    tabs: {
+      activeClass: "product-tabs__content-item--active",
+      items: tabList.children
+    }
+  };
+
 
   controllsContainer.addEventListener("click", e => {
     e.preventDefault();
@@ -10,18 +23,6 @@
     if (!$this.matches(".products-filter__link")) return;
 
     const target = $this.getAttribute("href");
-    const tabList = document.querySelector(".product-tabs__content");
-
-    const { controlls, tabs } = {
-      controlls: {
-        activeClass: "products-filter__item--active",
-        items: e.currentTarget.children
-      },
-      tabs: {
-        activeClass: "product-tabs__content-item--active",
-        items: tabList.children
-      }
-    };
 
     removeClassFromCollection(controlls.activeClass, controlls.items);
     removeClassFromCollection(tabs.activeClass, tabs.items);
