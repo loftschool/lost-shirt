@@ -722,7 +722,7 @@ body {
 }
 
 .inner-header__title {
-  background: url(./img/decor/header-guys.png) center bottom 77% no-repeat / 113%;
+  background: url(./img/decor/header-guys.png) center bottom 77% / 113% no-repeat ;
   width: 404px;
   align-self: stretch;
   position: relative;
