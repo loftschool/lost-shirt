@@ -18,7 +18,7 @@
     <section class="hero">
       <header class="header">
         <a class="logo">
-          <img src="./img/logo.png" class="logo__image" alt="" />
+          <img src="./img/content/logos/logo-main.png" class="logo__image" alt="" />
           </a>
           <a href="mailto:lostinspace@mail.ru" class="mail">
             <div class="mail__title">По всем вопросам пишите на:</div>
@@ -27,7 +27,7 @@
       </header>
       <div class="hero__content">
         <ul class="fade-slider">
-          <li class="fade-slider__item">
+          <li class="fade-slider__item fade-slider__item--style-tshirts fade-slider__item--visible">
             <div class="fade-slider__text">
               <h1 class="lined-text">
                 <span class="lined-text__word">три</span>
@@ -36,6 +36,22 @@
                     >по цене</span>
                 <span class="lined-text__word lined-text__word--yellow"
                     >двух</span>
+              </h1>
+            </div>
+          </li>
+          <li class="fade-slider__item fade-slider__item--style-games">
+            <div class="fade-slider__text">
+              <h1 class="lined-text lined-text--no-indent">
+                <span class="lined-text__word">Любимые игры</span>
+                <span class="lined-text__word lined-text__word--yellow">на лучших футболках</span>
+              </h1>
+            </div>
+          </li>
+          <li class="fade-slider__item fade-slider__item--style-presents">
+            <div class="fade-slider__text">
+              <h1 class="lined-text lined-text--no-indent">
+                <span class="lined-text__word">Подарки</span>
+                <span class="lined-text__word lined-text__word--yellow">для любимых</span>
               </h1>
             </div>
           </li>
@@ -68,6 +84,18 @@
             <li class="menu__item">
               <a href="#" class="menu__link">Женская коллекция</a>
             </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Популярные принты</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Новые принты</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Специальные предложения</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Скоро в продаже</a>
+            </li>
           </ul>
         </nav>
       </aside>
@@ -89,11 +117,11 @@
             <a href="#" data-filter="specials" class="products-filter__link">специальные предложения</a>
           </li>
           <li class="products-filter__item">
-            <a href="#" class="products-filter__link">скоро в продаже</a>
+            <a href="#" data-filter="soon" class="products-filter__link">скоро в продаже</a>
           </li>
         </ul>
         <ul class="products__list">
-          <li class="products__item new">
+          <li class="products__item new bestsellers">
             <a href="#" class="products__link">
               <div class="products__price">
                 <div class="products__price-amount">
@@ -115,7 +143,7 @@
               </div>
             </a>
           </li>
-          <li class="products__item new bestsellers">
+          <li class="products__item new bestsellers specials soon">
             <a href="#" class="products__link">
               <div class="products__price">
                 <div class="products__price-amount">
@@ -137,7 +165,7 @@
               </div>
             </a>
           </li>
-          <li class="products__item products__item--size-double products__item--color-black new popular">
+          <li class="products__item products__item--size-double products__item--color-black new popular specials">
             <a href="#" class="products__link">
               <div class="products__price">
                 <div class="products__price-amount">
@@ -159,7 +187,7 @@
               </div>
             </a>
           </li>
-          <li class="products__item products__item--size-double products__item--color-black new popular">
+          <li class="products__item products__item--size-double products__item--color-black new popular soon">
             <a href="#" class="products__link">
               <div class="products__price">
                 <div class="products__price-amount">
@@ -181,7 +209,7 @@
               </div>
             </a>
           </li>
-          <li class="products__item new">
+          <li class="products__item new specials soon">
             <a href="#" class="products__link">
               <div class="products__price">
                 <div class="products__price-amount">
@@ -234,7 +262,7 @@
 
         <ul class="collections__list">
           <li class="collections__item collections__item--guys">
-            <a href="#" class="collections__link">
+            <a href="/product.html" class="collections__link">
               <div class="collections__title">Мужская коллекция</div>
               <div class="collections__desc">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -244,7 +272,7 @@
             </a>
           </li>
           <li class="collections__item collections__item--girls">
-            <a href="#" class="collections__link">
+            <a href="/product.html" class="collections__link">
               <div class="collections__title">Женская коллекция</div>
               <div class="collections__desc">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -328,8 +356,8 @@
                   Санкт-Петербург, <br>
                   ул. Жуковского, д. 12
                 </p>
-                <p>
-                  Телефон: 8 (812) 315-72-35 <br>
+                  <p>
+                    Телефон: 8 (812) 315-72-35 <br>
                     Email: support@yourwebsite.com
                   </p>
               </div>
@@ -385,5 +413,6 @@
   <script src="./scripts/helpers.js"></script>
   <script src="./scripts/products-filter.js"></script>
   <script src="./scripts/sidebar-menu.js"></script>
+  <script src="./scripts/fade-slider.js"></script>
 </body>
 </html>
